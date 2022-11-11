@@ -1,0 +1,61 @@
+Product Document JSON syntax:
+
+{product_id:  	{product_name: value,
+		 weight: value,
+		 size: value,
+		 count: value,
+		 cost: value,
+		 candy_type: value,
+		 center_type: value,
+		 chocolate_type: value,
+		 bar_type: value,
+		 filling_type: value,
+		 qoh: value,
+		 reorder_amount_indicator: value,
+		 reviews:	[
+				 {customer_id_1: {rating: value, review_text: value}},
+				 {customer_id_2: {rating: value, review_text: value}}
+				]
+		}
+}
+
+
+--------------------------------------------------------------------
+Customer Document JSON syntax:
+
+[customer_id:	{firstname: value,
+		 lastname: value,
+		 addresses:	[
+				 {address_id: value,
+				  street_number: value,
+				  street_name: value,
+				  city: value,
+				  state: value,
+				  zipcode: value
+				 },
+				 {address_id_2: ...etc, ... }
+				],
+		 cell_number: value,
+		 payment_method:	{credit_card_id: value,
+					 credit_card_number: value,
+					 card_type: value,
+					 exp_date: value,
+					 cvv: value,
+					 address_id: value}
+		 orders: [{
+ 		 	   order_id: value,	
+ 		 	   order_date: value,
+			   order_items: [
+				 	 {product_id_1: value, count: value},
+				 	{ product_id_2: value, count: value}, ...
+					]	
+ 		 	   address_id: value,
+ 		 	   shipping_cost: value,
+ 		 	   promotion_code: {discount: value, 
+					    start_date: value, 
+					    end_date: value}
+			 }, ...
+			  ]
+					
+		}
+]
